@@ -1,0 +1,69 @@
+{
+    "manifestVersion": 1,
+    "id": "deezze-copy-id-and-name",
+    "version": "0.1.23",
+    "name": "Copy Work Item Id and Name",
+    "description": "",
+    "publisher": "Deezze",
+    "public": false,
+    "categories": [
+        "Azure Boards"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "helloflex-copyId-work-item-menu",
+            "type": "ms.vss-web.action",
+            "description": "Sample toolbar item which updates the title of a work item",
+            "targets": [
+                "ms.vss-work-web.work-item-context-menu",
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "text": "Copy Id",
+                "title": "Copies the workitem id to the clipboard",
+                "toolbarText": "Copy Id",
+                "uri": "copy-id.html",
+                "icon": "assets/copy-icon.png"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ],
+    "files": [
+        {
+            "path": "copy-id.html",
+            "addressable": true
+        },
+        {
+            "path": "main.js",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js",
+            "addressable": true
+        },
+        {
+            "path": "assets/copy-icon.png",
+            "addressable": true
+        },
+        {
+            "path": "assets/screenshot.png",
+            "addressable": true
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        }
+    ]
+}
